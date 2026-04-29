@@ -53,12 +53,12 @@ Hard drives must be mounted at sda1. Do not connect other hard drives to pi.
 
 ## Preview camera (to test focus, framing, etc)
 ```bash
-rpicam-hello -t 0 --camera 1 #you should see nest block face
+rpicam-hello -t 0 --camera 0 #you should see nest block face
 ```
 
 ## Take a single full resolution photo
 ```bash
-rpicam-jpeg -o test.jpeg --camera 1
+rpicam-jpeg -o test.jpeg --camera 0
 ```
 ## Setting up RTC
 * Note: Requires access with internet
