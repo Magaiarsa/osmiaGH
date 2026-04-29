@@ -7,11 +7,11 @@ end_t = 19
 duration = 580000  # Recording duration in milliseconds
 
 if start_t <= int(datetime.now().strftime('%H')) <= end_t:
-    main = '/mnt/OsmiaCam/OsmiaVids'
+    main = '/mnt/osmiaGH/OsmiaVids'
     if not os.path.exists(main):
         os.mkdir(main)
     
-    parent = '/mnt/OsmiaCam/OsmiaVids/extCam'
+    parent = '/mnt/osmiaGH/OsmiaVids/extCam'
     if not os.path.exists(parent):
         os.mkdir(parent)
     
