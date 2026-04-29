@@ -352,16 +352,16 @@ rpicam-jpeg -o test.jpeg --camera 1
 
 ## Clone this repository
 ```bash
-git clone https://github.com/Crall-Lab/osmiaCAM.git
+git clone https://github.com/Magaiarsa/osmiaGH.git
 ```
 Move all contents of this repositoty into home directory ('~'). You can do it in the GUI, or input this into the terminal:
 ```bash
-cp -rf osmiaCAM/* ~
+cp -rf osmiaGH/* ~
 ```
 
 ## Make mount directory
 ```bash
-sudo mkdir /mnt/OsmiaCam
+sudo mkdir /mnt/osmiaGH
 ```
 If folder exists, it will refuse to make the directory. Ignore it and move on.
 
@@ -388,8 +388,8 @@ Choose 1.
 Then add the following lines to the bottom of the crontab file if they're not there already (to get permissions and mount directory for external hard drive)
 ```bash
 @reboot sudo systemctl daemon-reload
-@reboot sudo mount /dev/sda1 /mnt/OsmiaCam -o umask=000
-@reboot sudo chmod 777 /mnt/OsmiaCam
+@reboot sudo mount /dev/sda1 /mnt/osmiaGH -o umask=000
+@reboot sudo chmod 777 /mnt/osmiaGH
 */10 * * * * /usr/bin/python greenHouse.py
 ```
 
@@ -413,8 +413,8 @@ crontab -e
 Now comment out the lines that refer to dayShift scripts. It should look like this:
 ```bash
 @reboot sudo systemctl daemon-reload
-@reboot sudo mount /dev/sda1 /mnt/OsmiaCam -o umask=000
-@reboot sudo chmod 777 /mnt/OsmiaCam
+@reboot sudo mount /dev/sda1 /mnt/osmiaGH -o umask=000
+@reboot sudo chmod 777 /mnt/osmiaGH
 #*/10 * * * * /usr/bin/python greenHouse.py
 ```
 
