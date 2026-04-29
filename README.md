@@ -10,7 +10,6 @@ This README is for the [osmiaCAM build instructions](https://github.com/Crall-La
   - [Check mounting location of external hard drive](#check-mounting-location-of-external-hard-drive-1)
   - [Preview camera (to test focus, framing, etc)](#preview-camera-to-test-focus-framing-etc-1)
   - [Take a single full resolution photo](#take-a-single-full-resolution-photo-1)
-  - [Setting up RTC](#setting-up-rtc-1)
   - [Clone this repository](#clone-this-repository-1)
   - [Make mount directory](#make-mount-directory-1)
   - [Install openCV library](#install-opencv-library-2)
@@ -60,24 +59,6 @@ rpicam-hello -t 0 --camera 0 #you should see nest block face
 ```bash
 rpicam-jpeg -o test.jpeg --camera 0
 ```
-## Setting up RTC
-* Note: Requires access with internet
-1. Connect RTC battery to slot labelled 'BAT'
-2. check that clock is working with sudo hwclock -r
-3. Run this:
-   ```bash
-   sudo hwclock --systohc
-   ```
-5. Edit configurations,
-   ```
-   sudo -E rpi-eeprom-config --edit
-   ```
-   modifying the two lines (if these variables do not exist, add them):
-   ```
-   POWER_OFF_ON_HALT = 1
-   WAKE_ON_GPIO=0
-   ```
-7. After adding the lines, ctl+s will save. Then use ctl+x to leave.
 
 ## Clone this repository
 ```bash
